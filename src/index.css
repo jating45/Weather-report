@@ -1,0 +1,130 @@
+
+body {
+  background-image: url("./image/mountains.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url("./image/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(26, 16, 114);
+  font-size: 24px;
+}
+
+.animated-img {
+  background-image: url("./image/cloud_animation.svg");
+  background-size: contain; /* Adjusts the size of the image to fit the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  width: 100px; /* Set your desired width */
+  height: 100px; /* Set your desired height */
+}
+
+
+.overlay-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(156, 83, 83, 0.5), rgba(36, 25, 25, 0.5)), url("./image/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(10, 101, 161);
+  font-size: 24px;
+}
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-size: cover;
+}
+
+.weather-widget {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-size: contain;
+  }
+
+  .weather-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .weather-widget {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .forecast-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #f0f0f0;
+  }
+
+  .weather-container {
+    padding: 5px;
+  }
+
+  .weather-widget {
+    padding: 15px;
+  }
+
+  .forecast-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forecast-container div {
+    margin-bottom: 10px;
+  }
+
+  .image-container img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: portrait) {
+  body {
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  body {
+    background-size: cover;
+  }
+}
